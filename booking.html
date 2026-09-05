@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Consultation — PH Legal Services</title>
+<meta name="description" content="Book a legal consultation with a Philippine lawyer in three quick steps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 5V33" stroke="#A9812E" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M8 10H32" stroke="#A9812E" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M8 10L4 19C4 22 7 24 8 24C9 24 12 22 12 19L8 10Z" stroke="#A9812E" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M32 10L28 19C28 22 31 24 32 24C33 24 36 22 36 19L32 10Z" stroke="#A9812E" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M13 35H27" stroke="#A9812E" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M20 33L14 35" stroke="#A9812E" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M20 33L26 35" stroke="#A9812E" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">PH Legal Services</span>
+        <span class="brand-tag">CONSULTATION BOOKING</span>
+      </span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lawyers.html">Find a Lawyer</a></li>
+        <li><a href="booking.html" aria-current="page">Book a Consultation</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="booking.html" class="btn btn-primary btn-sm">Book now</a>
+      </div>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-band">
+    <div class="container">
+      <span class="kicker">Booking</span>
+      <h1 style="max-width:22ch; color:#fff;">Schedule your consultation</h1>
+      <p>Three short steps. No account required — you'll get a docket reference by email once it's confirmed.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <ol class="stepper">
+        <li class="is-active">Lawyer &amp; schedule</li>
+        <li>Your details</li>
+        <li>Review &amp; confirm</li>
+      </ol>
+
+      <div class="booking-shell">
+        <form id="booking-form" novalidate>
+
+          <div class="alert alert-error" role="alert" data-form-alert></div>
+
+          <!-- Step 1: lawyer + schedule -->
+          <div class="form-panel is-active">
+            <div class="form-card">
+              <h3>Choose your lawyer and schedule</h3>
+
+              <div class="field-group">
+                <label for="lawyer-select">Lawyer</label>
+                <select id="lawyer-select" required>
+                  <option value="" disabled selected>Select a lawyer…</option>
+                </select>
+                <p class="field-hint" id="lawyer-hint"></p>
+                <p class="field-error">Please select a lawyer to continue.</p>
+              </div>
+
+              <div class="field-group">
+                <label>Consultation mode</label>
+                <div class="mode-options" id="mode-options"></div>
+              </div>
+
+              <div class="field-row">
+                <div class="field-group">
+                  <label for="booking-date">Preferred date</label>
+                  <input type="date" id="booking-date" required>
+                  <p class="field-error">Please choose a date.</p>
+                </div>
+                <div class="field-group" id="slot-error-group">
+                  <label>Available time slots</label>
+                  <div class="slot-grid" id="slot-grid"></div>
+                  <p class="field-hint">Pick a date first to see open slots for that day.</p>
+                  <p class="field-error">Please select an available time slot.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <span></span>
+              <button type="button" class="btn btn-primary" data-next-step>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2: client details -->
+          <div class="form-panel">
+            <div class="form-card">
+              <h3>Your details</h3>
+
+              <div class="field-row">
+                <div class="field-group">
+                  <label for="client-name">Full name</label>
+                  <input type="text" id="client-name" required autocomplete="name">
+                  <p class="field-error">Please enter your full name.</p>
+                </div>
+                <div class="field-group">
+                  <label for="client-phone">Mobile number</label>
+                  <input type="tel" id="client-phone" required pattern="^(\+63|0)9\d{9}$" placeholder="09XX XXX XXXX" autocomplete="tel">
+                  <p class="field-error">Please enter a valid PH mobile number (e.g. 0917 123 4567).</p>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="client-email">Email address</label>
+                <input type="email" id="client-email" required autocomplete="email">
+                <p class="field-error">Please enter a valid email address.</p>
+              </div>
+
+              <div class="field-group">
+                <label for="client-concern">Briefly describe your concern</label>
+                <textarea id="client-concern" required minlength="10" placeholder="e.g. I need help reviewing a lease agreement before signing."></textarea>
+                <p class="field-hint">This is shared with the lawyer ahead of your session so they can prepare.</p>
+                <p class="field-error">Please add a few words about your concern (at least 10 characters).</p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev-step>Back</button>
+              <button type="button" class="btn btn-primary" data-next-step>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 3: review + submit -->
+          <div class="form-panel">
+            <div class="form-card">
+              <h3>Review your booking</h3>
+              <p style="color:var(--ink-soft);">Double-check the details on the right before confirming. You can still go back to make changes.</p>
+
+              <div class="field-group" style="margin-top:1.5rem;">
+                <label style="display:flex; align-items:flex-start; gap:0.6rem; font-weight:400;">
+                  <input type="checkbox" id="consent-check" required style="margin-top:0.3rem;">
+                  <span>I understand this is a paid consultation and agree to share the details above with the selected lawyer.</span>
+                </label>
+                <p class="field-error">Please confirm before submitting.</p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" data-prev-step>Back</button>
+              <button type="submit" class="btn btn-primary">Confirm booking</button>
+            </div>
+          </div>
+
+          <!-- Confirmation -->
+          <div class="form-card confirm-panel" id="confirm-panel" style="display:none;">
+            <div class="confirm-badge" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Booking confirmed</h3>
+            <span class="confirm-code" id="confirm-reference"></span>
+            <p id="confirm-summary" style="color:var(--ink-soft);"></p>
+            <p style="font-size:0.85rem; color:var(--ink-soft);">A confirmation has been sent to <strong id="confirm-email"></strong>. Save your docket reference — you'll need it when you arrive or join the call.</p>
+            <a href="lawyers.html" class="btn btn-ghost" style="margin-top:1rem;">Browse more lawyers</a>
+          </div>
+
+        </form>
+
+        <aside class="receipt">
+          <h4>Booking summary</h4>
+          <div class="r-row"><span class="k">Lawyer</span><span class="v" id="receipt-lawyer">—</span></div>
+          <div class="r-row"><span class="k">Date</span><span class="v" id="receipt-date">—</span></div>
+          <div class="r-row"><span class="k">Time</span><span class="v" id="receipt-time">—</span></div>
+          <div class="r-row"><span class="k">Mode</span><span class="v" id="receipt-mode">—</span></div>
+          <div class="r-total"><span>Consultation fee</span><span id="receipt-rate">—</span></div>
+          <p class="r-note">Payment is settled directly with your chosen lawyer or firm at the time of consultation. This sample platform does not process payments.</p>
+        </aside>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p><strong style="color:#fff;">PH Legal Services</strong></p>
+        <p>A sample legal consultation booking platform built for Philippine law firms and independent practitioners.</p>
+      </div>
+      <div>
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="lawyers.html">Find a lawyer</a></li>
+          <li><a href="booking.html">Book a consultation</a></li>
+          <li><a href="about.html">About the platform</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Practice areas</h5>
+        <ul>
+          <li><a href="lawyers.html">Family Law</a></li>
+          <li><a href="lawyers.html">Corporate Law</a></li>
+          <li><a href="lawyers.html">Immigration</a></li>
+          <li><a href="lawyers.html">Criminal Defense</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="contact.html">Contact form</a></li>
+          <li><a href="mailto:hello@phlegalservices.sample">hello@phlegalservices.sample</a></li>
+          <li><a href="tel:+6321234567">(02) 123-4567</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> PH Legal Services. Bendon™ Portfolio sample project.</span>
+      <span class="disclaimer">This is a demo application built for portfolio purposes. Lawyer profiles, reviews, and availability shown are fictional sample data and do not represent real legal service providers.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/lawyers-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.zed/
+*.swp
+
+# Laragon / local PHP server
+*.log
+
+# Local data written by the PHP endpoints at runtime
+# (the tracked data/*.json files ship as empty samples — see README)

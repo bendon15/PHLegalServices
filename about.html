@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — PH Legal Services</title>
+<meta name="description" content="Why PH Legal Services exists and how it vets lawyers before listing them on the platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 5V33" stroke="#A9812E" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M8 10H32" stroke="#A9812E" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M8 10L4 19C4 22 7 24 8 24C9 24 12 22 12 19L8 10Z" stroke="#A9812E" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M32 10L28 19C28 22 31 24 32 24C33 24 36 22 36 19L32 10Z" stroke="#A9812E" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M13 35H27" stroke="#A9812E" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M20 33L14 35" stroke="#A9812E" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M20 33L26 35" stroke="#A9812E" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">PH Legal Services</span>
+        <span class="brand-tag">CONSULTATION BOOKING</span>
+      </span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lawyers.html">Find a Lawyer</a></li>
+        <li><a href="booking.html">Book a Consultation</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="booking.html" class="btn btn-primary btn-sm">Book now</a>
+      </div>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <div class="container split-hero">
+      <div>
+        <span class="docket-tag" style="color:var(--maroon); border-color:rgba(110,20,35,0.3);"><span class="dot"></span> About the platform</span>
+        <h1>Built to close the gap between needing a lawyer and actually reaching one.</h1>
+        <p class="lede" style="color:var(--ink-soft);">Most people's first legal question isn't answered by a search engine — it needs a licensed professional who can look at their specific situation. PH Legal Services exists to make that first conversation easier to schedule, in plain language, with no jargon and no guesswork about cost.</p>
+      </div>
+      <div class="docket-file">
+        <div class="df-head">
+          <span class="df-no">ABOUT · SAMPLE PROJECT</span>
+          <span class="df-status">Portfolio build</span>
+        </div>
+        <div class="df-row"><span class="k">Purpose</span><span class="v">Portfolio demonstration</span></div>
+        <div class="df-row"><span class="k">Stack</span><span class="v">PHP, HTML, CSS, JS</span></div>
+        <div class="df-row"><span class="k">Data</span><span class="v">Flat JSON files</span></div>
+        <div class="df-row"><span class="k">Hosting</span><span class="v">Vercel (static)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stat-strip">
+    <div><span class="stat-num">180+</span><span class="stat-label">Verified attorneys</span></div>
+    <div><span class="stat-num">8</span><span class="stat-label">Cities covered</span></div>
+    <div><span class="stat-num">2,400+</span><span class="stat-label">Consultations booked</span></div>
+    <div><span class="stat-num">4.8/5</span><span class="stat-label">Average rating</span></div>
+  </section>
+
+  <section class="section section-ruled">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">How lawyers are listed</span>
+        <h2>What a profile represents</h2>
+      </div>
+      <ol class="process-list">
+        <li>
+          <div>
+            <h4>IBP membership on file</h4>
+            <p>Every listed attorney's Integrated Bar of the Philippines number is recorded on their profile alongside their firm and years of practice.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Practice area verification</h4>
+            <p>Specialties shown on a profile reflect the matters that lawyer actively takes on, not a generic list of every possible service.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Transparent consultation fees</h4>
+            <p>Rates are shown upfront on every profile so clients know the cost of a first session before booking.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-ink">
+    <div class="container" style="max-width:760px;">
+      <span class="kicker">Note for reviewers</span>
+      <h2 style="color:#fff;">This is a sample project</h2>
+      <p>PH Legal Services is a portfolio piece built to demonstrate a full booking workflow — directory search, filtering, a multi-step form, and a confirmation flow — using plain PHP, HTML, CSS, and JavaScript with no database. Lawyer profiles, reviews, and availability are fictional. The booking endpoints (<code>php/get-lawyers.php</code>, <code>php/book.php</code>) read and write flat JSON files and are meant to run under a local PHP server such as Laragon; the deployed static version on Vercel uses the same front end with a client-side data source so the demo works without a live backend.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p><strong style="color:#fff;">PH Legal Services</strong></p>
+        <p>A sample legal consultation booking platform built for Philippine law firms and independent practitioners.</p>
+      </div>
+      <div>
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="lawyers.html">Find a lawyer</a></li>
+          <li><a href="booking.html">Book a consultation</a></li>
+          <li><a href="about.html">About the platform</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Practice areas</h5>
+        <ul>
+          <li><a href="lawyers.html">Family Law</a></li>
+          <li><a href="lawyers.html">Corporate Law</a></li>
+          <li><a href="lawyers.html">Immigration</a></li>
+          <li><a href="lawyers.html">Criminal Defense</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="contact.html">Contact form</a></li>
+          <li><a href="mailto:hello@phlegalservices.sample">hello@phlegalservices.sample</a></li>
+          <li><a href="tel:+6321234567">(02) 123-4567</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> PH Legal Services. Bendon™ Portfolio sample project.</span>
+      <span class="disclaimer">This is a demo application built for portfolio purposes. Lawyer profiles, reviews, and availability shown are fictional sample data and do not represent real legal service providers.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
