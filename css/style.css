@@ -825,12 +825,14 @@ input:focus, select:focus, textarea:focus {
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(255,255,255,0.1);
 }
 .testimonial {
   padding: 2rem;
   background: var(--ink-2);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.testimonial:first-child {
+  border-left: none;
 }
 .testimonial .stars { color: var(--brass); margin-bottom: 0.75rem; letter-spacing: 0.1em; }
 .testimonial p { color: #dfe4ec; font-size: 0.95rem; }
@@ -839,6 +841,13 @@ input:focus, select:focus, textarea:focus {
 
 @media (max-width: 860px) {
   .testimonial-grid { grid-template-columns: 1fr; }
+  .testimonial {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .testimonial:first-child {
+    border-top: none;
+  }
 }
 
 /* -------------------------------------------------------------------------
